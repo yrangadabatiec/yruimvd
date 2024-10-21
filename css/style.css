@@ -66,7 +66,6 @@ nav {
 }
 
 .dropdown {
-    position: relative;
     display: inline-block;
 }
 
@@ -141,8 +140,6 @@ nav {
 }
 
 /*#endregion*/
-
-
 
 /* ---ШАПКА--- */
 /*#region*/
@@ -232,7 +229,6 @@ header {
 /*#endregion*/
 
 /* ---МЕЙН--- */
-
 .main-title {
     font-size: 4rem;
     color: var(--color-lblue);
@@ -621,8 +617,27 @@ header {
 }
 
 @media (max-width: 768px) {
+    .nav {
+        justify-content: center;
+        gap: 10vw;
+    }
+
     .nav-items {
-        gap: 2rem;
+        gap: 10vw;
+    }
+
+    .dropdown-content {
+        width: 100vw;
+        left: 0;
+        text-align: center;
+    }
+
+    .dropdown-content a {
+        padding: 1rem;
+        display: block;
+        font-size: 1rem;
+        text-decoration: none;
+        color: var(--color-white);
     }
 
     .nav-text {
@@ -632,6 +647,14 @@ header {
     .nav-icon {
         height: 1.5rem;
         width: 1.5rem;
+    }
+}
+@media (max-width: 425px) {
+    .nav {
+        gap: 7vw;
+    }
+    .nav-items {
+        gap: 7vw;
     }
 }
 
@@ -669,6 +692,44 @@ header {
 
     .header-left {
         width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background: none;
+        background-color: var(--color-blue);
+    }
+
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .header-left {
+        padding: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .header-subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 2rem;
+    }
+
+    .header-advantages {
+        font-size: 1.25rem;
+        padding-left: 2rem;
+    }
+
+    .header-more {
+        font-size: 1.5rem;
     }
 }
 
@@ -712,6 +773,10 @@ header {
         padding: 2rem 3rem;
     }
 
+    .course-img {
+        margin: 0;
+    }
+
     .course-text {
         width: 75%;
     }
@@ -737,6 +802,40 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .course-item {
+        width: 90vw;
+        padding: 2rem;
+    }
+
+    .course-img {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .course-title {
+        font-size: 2rem;
+    }
+
+    .course-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .course-img {
+        display: none;
+    }
+    .main-title {
+        font-size: 2rem;
+    }
+}
 /* ---МЕРОПРИЯТИЯ--- */
 @media (max-width: 1600px) {
     .swiper-container {
@@ -766,6 +865,28 @@ header {
     }
 }
 
+@media (max-width: 768px) {
+    .swiper-container {
+        width: 90vw;
+    }
+
+    .swiper-slide {
+        width: 90vw !important;
+    }
+
+    .swiper-text {
+        font-size: 1.25rem;
+    }
+
+    .sl-content {
+        height: 14rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none !important;
+    }
+}
 
 /* ---КОНТАКТЫ--- */
 @media (max-width: 1600px) {
@@ -777,15 +898,18 @@ header {
         flex-direction: column;
     }
 }
+
 @media (max-width: 1280px) {
     .contact-left {
         width: 100%;
     }
+
     .contact {
         align-items: center;
         flex-direction: column;
         gap: 2rem;
     }
+
     .contact-map {
         width: 100%;
         display: flex;
@@ -796,14 +920,59 @@ header {
     }
 }
 
-/* ---ОТЗЫВЫ--- */
-@media (max-width: 1600px) {
-    .feedback-container {
-        width: 70rem;
+@media (max-width: 768px) {
+    .contact-text {
+        flex-direction: column;
+        margin-bottom: 1rem;
     }
 
-    .feedback-item {
-        padding: 2rem;
+    .contact-title {
+        font-size: 2rem;
+        margin: 0;
+    }
+    .contact-subtitle {
+        font-size: 1.25rem;
+        margin: 0;
+    }
+
+    .contact-left p,
+    .contact-map p {
+        font-size: 1rem;
+    }
+
+    .contact-left form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cf-container {
+        margin: 2rem 0 1rem 0;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .cf-item {
+        width: 90vw;
+    }
+    .contact-map {
+        padding: 0;
+        width: 90vw;
+    }
+}
+
+/* ---ОТЗЫВЫ--- */
+@media (max-width: 1600px) {
+    .contact-left form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cf-container {
+        margin: 2rem 0 1rem 0;
+        display: flex;
+        gap: 1rem;
     }
 
 }
@@ -834,6 +1003,21 @@ header {
 @media (max-width: 1024px) {
     .feedback-item {
         width: 35rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback-item {
+        width: 90vw !important;
+        padding: 2rem 1rem !important;
+    }
+    .feedback-title {
+        font-size: 2rem;
+    }
+    
+    .feedback-subtitle {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 }
 
@@ -864,5 +1048,10 @@ header {
 @media (max-width: 1024px) {
     .feedback-item {
         width: 35rem;
+    }
+}
+@media (max-width: 768px) {
+    .footer-img {
+        display: none !important;
     }
 }
