@@ -92,6 +92,7 @@ nav {
     position: absolute;
     background-color: var(--color-blue);
     z-index: 10;
+    left: 0 !important;
     border: solid 1px var(--color-lblue);
 }
 
