@@ -206,12 +206,13 @@ header {
     text-align: center;
     margin-top: 2rem;
     font-size: 1.74rem;
-    color: var(--color-blue);
+    color: var(--color-lblue);
     font-weight: 500;
 }
 
 .header-more:hover {
     background-color: var(--color-gray);
+    color: var(--color-blue);
 }
 
 .header-img {
