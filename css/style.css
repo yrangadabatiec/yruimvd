@@ -63,7 +63,6 @@ nav {
 .nav-menu {
     display: flex;
     align-items: center;
-    position: relative;
 }
 
 .dropdown {
@@ -630,6 +629,7 @@ header {
 
     .dropdown-content {
         width: 100vw;
+        left: 0;
         text-align: center;
     }
 
